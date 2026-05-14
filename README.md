@@ -4,7 +4,6 @@
 Dự án được tổ chức theo cấu trúc chuẩn của FIT4012 bao gồm các thành phần mã nguồn, kịch bản kiểm thử và tài liệu hướng dẫn.
 
 ## 2. Cách chạy chương trình
-
 ### Cách 1: Sử dụng Makefile
 Nếu môi trường hỗ trợ make, có thể biên dịch và chạy nhanh bằng lệnh:
 - Lệnh: make
