@@ -22,16 +22,20 @@ $(ENCRYPT_TARGET): encrypt.cpp $(DEPS)
 # Biên dịch chương trình giải mã
 $(DECRYPT_TARGET): decrypt.cpp $(DEPS)
 	$(CXX) $(CXXFLAGS) decrypt.cpp -o $(DECRYPT_TARGET)
+
 # Chạy kịch bản mẫu
 run: all
 	@mkdir -p logs
 	bash scripts/run_sample.sh
+
 # Thử nghiệm nhanh mã hóa
 encrypt-sample: $(ENCRYPT_TARGET)
 	printf "hello FIT4012 AES\n" | ./$(ENCRYPT_TARGET)
+
 # Thử nghiệm nhanh giải mã
 decrypt-sample: $(DECRYPT_TARGET)
 	./$(DECRYPT_TARGET)
+
 # Chạy toàn bộ các bài test lab
 test: all
 	@echo "--- Đang chạy các bài kiểm tra tự động ---"
