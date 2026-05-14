@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 # Thiết lập dừng script nếu gặp lỗi, biến chưa định nghĩa hoặc lỗi pipe
 set -euo pipefail
-
 # Đảm bảo thư mục logs tồn tại
 mkdir -p logs
-
 echo "--- Đang biên dịch mã nguồn (make all) ---"
 make all
 PLAINTEXT="hello FIT4012 AES"
-
 {
   echo "=========================================="
   echo "[INFO] Thời gian chạy: $(date)"
