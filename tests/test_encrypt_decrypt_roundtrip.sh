@@ -9,7 +9,9 @@ make all > /dev/null 2>&1
 cat > keyfile <<'KEY'
 01 04 02 03 01 03 04 0A 09 0B 07 0F 0F 06 03 00
 KEY
+
 PLAINTEXT="hello FIT4012 AES"
+
 # 3. Thực hiện mã hóa
 # Gửi plaintext vào encrypt, kết quả sẽ tạo ra file message.aes
 echo "[INFO] Đang thực hiện mã hóa thử nghiệm..."
