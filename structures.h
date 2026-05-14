@@ -3,7 +3,6 @@
  */
 #ifndef STRUCTURES_H
 #define STRUCTURES_H
-
 // Encryption: Forward Rijndael S-box 
 unsigned char s[256] =
 {
@@ -24,7 +23,6 @@ unsigned char s[256] =
 	0xE1, 0xF8, 0x98, 0x11, 0x69, 0xD9, 0x8E, 0x94, 0x9B, 0x1E, 0x87, 0xE9, 0xCE, 0x55, 0x28, 0xDF,
 	0x8C, 0xA1, 0x89, 0x0D, 0xBF, 0xE6, 0x42, 0x68, 0x41, 0x99, 0x2D, 0x0F, 0xB0, 0x54, 0xBB, 0x16
 };
-
 // Encryption: Multiply by 2 for MixColumns
 unsigned char mul2[] =
 {
@@ -206,11 +204,10 @@ void KeyExpansionCore(unsigned char * in, unsigned char i) {
 	in[1] = s[in[1]];
 	in[2] = s[in[2]];
 	in[3] = s[in[3]];
-
 	// RCon
 	in[0] ^= rcon[i];
 }
-
+//hiếu
 /* The main KeyExpansion function
  * Generates additional keys using the original key
  * Total of 11 128-bit keys generated, including the original
@@ -247,5 +244,6 @@ void KeyExpansion(unsigned char inputKey[16], unsigned char expandedKeys[176]) {
 
 	}
 }
-
+//quan
 #endif /* STRUCTURES_H */
+// Final update.
